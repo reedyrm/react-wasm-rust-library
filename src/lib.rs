@@ -1,6 +1,7 @@
 mod utils;
 
 use cfg_if::cfg_if;
+use std::fmt;
 use wasm_bindgen::prelude::*;
 
 cfg_if::cfg_if! {
@@ -23,8 +24,8 @@ pub fn greet() {
 }
 
 #[wasm_bindgen]
-pub fn hello() {
-    println!("Hello, world!");
+pub fn hello(name: &str) -> String {
+    format!("Hello, {}", name)
 }
 
 #[wasm_bindgen]
