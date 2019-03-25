@@ -29,11 +29,11 @@ pub fn hello(name: &str) -> String {
 }
 
 #[wasm_bindgen]
-pub fn add(num1: i64, num2: i64) -> i64 {
+pub fn add(num1: u32, num2: u32) -> u32 {
     num1 + num2
 }
 
 #[wasm_bindgen]
-pub fn sub(num1: i64, num2: i64) -> i64 {
+pub fn sub(num1: i32, num2: i32) -> i32 {
     num1 - num2
 }
